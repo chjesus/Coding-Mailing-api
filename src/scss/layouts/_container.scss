@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: #0e0e0e;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__form {
+    background-color: #e1aa2c;
+    width: 50%;
+    padding: 20px 10px;
+
+    &--title {
+      font-size: 16px;
+      font-weight: 900;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    &--email {
+      margin-top: 20px;
+      position: relative;
+      z-index: 0;
+      width: 100%;
+
+      input {
+        width: 100%;
+        padding: 15px 25px;
+        border-radius: 10px;
+        background-color: transparent;
+        border: 0;
+        border: 1px solid #0e0e0e;
+        font-size: 20px;
+        outline: none;
+
+        &::placeholder {
+          color: #0e0e0e;
+        }
+      }
+
+      button {
+        position: absolute;
+        font-size: 20px;
+        padding: 10px 15px;
+        border: 0;
+        border-radius: 10px;
+        background-color: #0e0e0e;
+        color: white;
+        outline: none;
+        cursor: pointer;
+        top: 50%;
+        right: 0;
+        transform: translate(-20%, -50%);
+      }
+    }
+
+    .container__message {
+      margin-top: 20px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      display: none;
+
+      h1 {
+        color: white;
+        font-size: 20px;
+      }
+    }
+
+    .error {
+      background-color: red;
+    }
+
+    .succes {
+      background-color: green;
+    }
+
+    .active {
+      display: block;
+    }
+  }
+}
